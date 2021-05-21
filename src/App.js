@@ -3,7 +3,7 @@ import React from 'react';
 // import Card from "./component/Card";
 import Expenses from "./components/Expenses/Expenses";
 
-export default function App() {
+const App = () => {
   const expenses = [
     {
       id: 1,
@@ -60,4 +60,4 @@ return React.createElement(
   // );
 }
 
-// export default App;
+export default App;
