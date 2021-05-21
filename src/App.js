@@ -1,7 +1,7 @@
 import React from 'react';
 // import ExpenseItem from "./components/ExpenseItem";
 // import Card from "./component/Card";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 export default function App() {
   const expenses = [
