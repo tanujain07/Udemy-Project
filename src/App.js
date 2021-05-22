@@ -1,7 +1,8 @@
 import React from 'react';
 // import ExpenseItem from "./components/ExpenseItem";
-// import Card from "./component/Card";
+// import Card from "";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 
 const App = () => {
   const expenses = [
@@ -42,22 +43,23 @@ const App = () => {
       date: new Date(2020, 7, 23),
     },
   ];
-return React.createElement(
-  'div',
-  {}, 
-  React.createElement('h2',{},'Hey! Im learnig ReactJs.'),
-  React.createElement(Expenses ,{items: expenses}));
+// return React.createElement(
+//   'div',
+//   {}, 
+//   React.createElement('h2',{},'Hey! Im learnig ReactJs.'),
+//   React.createElement(Expenses ,{items: expenses}));
 
 
 
 
 
-// return(
-  //   <div>
-  //     <h2>Hey! Im learnig ReactJs.</h2>
-  //     <Expenses items={expenses}/>
-  //   </div>
-  // );
+return(
+    <div>
+      <h2>Hey! Im learnig ReactJs.</h2>
+      <NewExpenses/>
+      <Expenses items={expenses}/>
+    </div>
+  );
 }
 
 export default App;
