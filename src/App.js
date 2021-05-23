@@ -14,7 +14,7 @@ const App = () => {
     },
     {
       id: 2,
-      title: "Other Expenses",
+      title: "Electricity Bills",
       amount: 359.34,
       date: new Date(2019, 8, 29),
     },
@@ -43,6 +43,11 @@ const App = () => {
       date: new Date(2020, 7, 23),
     },
   ];
+const addExpenseDataHandler= (expenses)=>{
+  console.log('In App.js');
+  console.log(expenses);
+};
+
 // return React.createElement(
 //   'div',
 //   {}, 
@@ -56,7 +61,7 @@ const App = () => {
 return(
     <div>
       <h2>Hey! Im learnig ReactJs.</h2>
-      <NewExpenses/>
+      <NewExpenses  addExpenses={addExpenseDataHandler}/>
       <Expenses items={expenses}/>
     </div>
   );
