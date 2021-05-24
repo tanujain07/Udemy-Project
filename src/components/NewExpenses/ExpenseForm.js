@@ -4,7 +4,7 @@ import "./ExpenseForm.css";
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDay, setEnteredDay] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
   //METHOD WHEN WE USE ONLY ONE STATE
   //   const [inputUser, setInputUser] = useState({
@@ -32,8 +32,8 @@ const ExpenseForm = (props) => {
     //     });
   };
 
-  const enteredDayHandler = (event) => {
-    setEnteredDay(event.target.value);
+  const enteredDateHandler = (event) => {
+    setEnteredDate(event.target.value);
     //     setInputUser({
     //       ...inputUser,
     //       enteredDay: event.target.value,
@@ -46,13 +46,13 @@ const ExpenseForm = (props) => {
       const expenseData = {
         title: enteredTitle,
         amount: enteredAmount,
-        day: new Date(enteredDay),
+        date: new Date(enteredDate),
      
     };
     props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
-    setEnteredDay('');
+    setEnteredDate('');
   };
   
   return (
@@ -79,8 +79,8 @@ const ExpenseForm = (props) => {
             type="date"
             min="2016-01-01"
             max="2021-06-30"
-            value={enteredDay}
-            onChange={enteredDayHandler}
+            value={enteredDate}
+            onChange={enteredDateHandler}
           />
         </div>
       </div>
